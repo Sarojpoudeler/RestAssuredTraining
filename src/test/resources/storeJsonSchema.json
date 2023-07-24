@@ -1,0 +1,50 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "type": "array",
+    "items": {
+        "$ref": "#/definitions/Welcome2Element"
+    },
+    "definitions": {
+        "Welcome2Element": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "Students": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Student"
+                    }
+                }
+            },
+            "required": [
+                "Students"
+            ],
+            "title": "Welcome2Element"
+        },
+        "Student": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "type": "integer"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "address": {
+                    "type": "string"
+                },
+                "pirce": {
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "address",
+                "id",
+                "name",
+                "pirce"
+            ],
+            "title": "Student"
+        }
+    }
+}
